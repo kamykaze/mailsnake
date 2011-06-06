@@ -1,5 +1,9 @@
 import urllib2
-import json
+
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 class MailSnake(object):
     def __init__(self, apikey = '', extra_params = {}):
